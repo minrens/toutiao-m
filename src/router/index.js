@@ -2,13 +2,17 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
 // 路由表
 const routes = [
   {
     path: '/login',
     name: 'login',
     component: () => import('@/views/login')
+<<<<<<< HEAD
   },
   {
     path: '/',
@@ -55,6 +59,10 @@ const routes = [
   }
 ]
 
+=======
+  }
+]
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
 const router = new VueRouter({
   routes
 })

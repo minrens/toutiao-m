@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * 请求模块
  */
@@ -43,3 +44,14 @@ request.interceptors.request.use(function (config) {
 // 响应拦截器
 
 export default request
+=======
+// 请求模块
+// 加载axios
+import axios from 'axios'
+const request = axios.create({
+    baseURL: "http://ttapi.research.itcast.cn/"//接口的基准路径
+})
+//请求拦截器
+//响应拦截器
+export default request
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177

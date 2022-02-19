@@ -1,6 +1,7 @@
 <template>
   <div class="login-container">
     <!-- 导航栏 -->
+<<<<<<< HEAD
     <van-nav-bar
       class="page-nav-bar"
       title="登录"
@@ -70,18 +71,50 @@
       </div>
     </van-form>
     <!-- /登录表单 -->
+=======
+    <van-nav-bar class="page-nav-bar" title="登录" />
+    <!-- 登录表单 -->
+    <van-form @submit="onSubmit">
+      <van-cell-group inset>
+        <van-field
+          v-model="username"
+          name="用户名"
+          placeholder="请输入手机号"
+        >
+          <i slot="left-icon" class="tuotiao tuotiao-shouji"></i>
+        </van-field>
+        <van-field
+          v-model="password"
+          type="password"
+          name="验证码"
+          placeholder="请输入验证码"
+        >
+          <i slot="left-icon" class="tuotiao tuotiao-yanzhengma"></i>
+          <template>
+        </van-field>
+      </van-cell-group>
+      <div style="margin: 16px">
+        <van-button  block type="primary" native-type="submit">登录</van-button>
+      </div>
+    </van-form>
+    <!-- 登录表单 -->
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import { login, sendSms } from '@/api/user'
 
+=======
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
 export default {
   name: 'LoginIndex',
   components: {},
   props: {},
   data () {
     return {
+<<<<<<< HEAD
       user: {
         mobile: '13911111111', // 手机号
         code: '246810' // 验证码
@@ -103,6 +136,10 @@ export default {
         }]
       },
       isCountDownShow: false // 是否展示倒计时
+=======
+      username: '',
+      password: ''
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
     }
   },
   computed: {},
@@ -110,6 +147,7 @@ export default {
   created () {},
   mounted () {},
   methods: {
+<<<<<<< HEAD
     async onSubmit () {
       // 1. 展示登陆中 loading
       this.$toast.loading({
@@ -160,10 +198,15 @@ export default {
           this.$toast('发送失败，请稍后重试')
         }
       }
+=======
+    onSubmit (values) {
+      console.log('submit', values)
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
     }
   }
 }
 </script>
+<<<<<<< HEAD
 
 <style scoped lang="less">
 .login-container {
@@ -188,4 +231,12 @@ export default {
     }
   }
 }
+=======
+<style scoped lang="less">
+  .login-container{
+    .tuotiao{
+      font-size:33px;
+    }
+  }
+>>>>>>> 06c83fedcdeb05cae8dd77f3b9f2401d3b006177
 </style>
